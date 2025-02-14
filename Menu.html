@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu with Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .menu-container {
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .menu-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Updated grid layout for side-by-side images */
+        .menu-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .menu-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 280px; /* Adjust the width of each item */
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .item-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .item-price {
+            font-size: 18px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        .add-to-cart {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #218838;
+        }
+
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+     <!-- Header with Restaurant Title -->
+    <div class="header">
+        <h1>Our Menu</h1>
+    </div>
+<div class="menu-container">
+        <h1>Our Menu</h1>
+        <h3><center>Made with Love</h3>
+
+    <div class="menu-container">
+        <!-- Starters Section -->
+        <div class="menu-section">
+            
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/enabled_lo/564x/e1/6c/6a/e16c6abdb9e04596239436e47178c1cc.jpg" alt="Chicken Wings">
+                    <ul class="nav-links">
+                        <li><a href="Starters.html">Starters</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/enabled_lo/236x/7b/69/ea/7b69ea839992e50e1d570d2c56bf70ab.jpg" alt="Noodles">
+                    <ul class="nav-links">
+                        <li><a href="Fast Food.html">Fast Food</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Biryani Section -->
+        <div class="menu-section">
+            
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/474x/09/36/99/093699149a5da725826e1b39abe5bd07.jpg" alt="Karachi Chicken Biryani">
+                    <ul class="nav-links">
+                        <li><a href="Biryanis.html">Biryanis</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/236x/19/ff/4b/19ff4b8d5392b1d384f8fbcf0c8e187d.jpg" alt="Caesar Salad">
+                    <ul class="nav-links">
+                        <li><a href="Salad.html">Salad</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desserts Section -->
+        <div class="menu-section">
+            
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/236x/d4/fe/36/d4fe36be0ea2f1fbb0d0a9c41ece7768.jpg" alt="Cheesecake">
+                    <ul class="nav-links">
+                        <li><a href="Deserts.html">Deserts</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/a9/3d/77/a93d77d3e242262f2c919bf66aef5b39.jpg" alt="Gulab Jamun">
+                    <ul class="nav-links">
+                        <li><a href="Sweets.html">Sweets</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shakes Section -->
+        <div class="menu-section">
+           
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/236x/78/a4/32/78a432aae6d7af19f7e644867963623a.jpg" alt="Salted Caramel Pretzel">
+                    <ul class="nav-links">
+                        <li><a href="Shakes.html">Shakes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Spot - Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .contact-details p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        .contact-form-section {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form-section form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form-section input,
+        .contact-form-section textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form-section button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form-section button:hover {
+            background-color: #444;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            section {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            input, button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <section class="contact-info">
+        <h2>We’d Love to Hear From You!</h2>
+        <p>If you have any questions, suggestions, reach out to us using the form below or through our contact information.</p>
+
+        <div class="contact-details">
+            <p><strong>Phone:</strong> +91 9392604717</p>
+            <p><strong>Email:</strong> contact@diningspot.com</p>
+            <p><strong>Address:</strong> Near Vignan University, Vadlamudi, Guntur, India</p>
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <h2>Send Us a Message</h2>
+        <form id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+
+            <button type="submit">Send Message</button>
+            <p id="formMessage" style="display: none;">Thank you for contacting us! We’ll get back to you soon.</p>
+        </form>
+    </section>
+
+   
+
+    <script src="/js/contact.js"></script>
+</body>
+</html>
