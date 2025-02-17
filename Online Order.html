@@ -70,7 +70,7 @@
             <textarea id="address" name="address" rows="4" required></textarea>
 
             <!-- Menu Selection -->
-            <li><h1><a href="menu.html">Menu</a></h1></li>
+           <h1><a href="menu.html">Menu</a></h1>
             
                 
             </select>
@@ -79,6 +79,17 @@
             <label for="instructions">Special Instructions:</label>
             <textarea id="instructions" name="instructions" rows="4"></textarea>
 
+  <!-- Payment Section -->
+            <section class="payment-section">
+                <h2>Payment Details</h2>
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="UPI">UPI</option>
+                    <option value="Debit Card">Debit Card</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Pay on Delivary">Pay on Delivary</option>
+                </select>
+            </section>
             <!-- Submit Button -->
             <input type="submit" value="Place Order">
         </form>
