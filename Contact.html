@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dining Spot - Contact Us</title>
+    <!-- Link to Font Awesome for social media icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -74,6 +77,55 @@
             width: 100%;
         }
 
+        /* Social Media Icons */
+        .social-media h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .social-media ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .social-media ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .social-media ul li a {
+            font-size: 30px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        /* Custom Colors for Social Media Icons */
+        .social-media .instagram {
+            color: #E1306C; /* Instagram Pink */
+        }
+
+        .social-media .facebook {
+            color: #1877F2; /* Facebook Blue */
+        }
+
+        .social-media .youtube {
+            color: #FF0000; /* YouTube Red */
+        }
+
+        .social-media ul li a:hover {
+            opacity: 0.7; /* Slight opacity on hover */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+
         /* Responsive Styles */
         @media (max-width: 768px) {
             section {
@@ -86,39 +138,6 @@
             }
         }
 
-  .social-media h3 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .social-media ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .social-media ul li {
-            margin-bottom: 10px;
-        }
-
-        .social-media ul li a {
-            font-size: 18px;
-            color: #ff7f50;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .social-media ul li a:hover {
-            color: #e60000;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            color: #777;
-        }
-
     </style>
 </head>
 <body>
@@ -128,7 +147,7 @@
 
     <section class="contact-info">
         <h2>We’d Love to Hear From You!</h2>
-        <p>If you have any questions, suggestions, reach out to us using the form below or through our contact information.</p>
+        <p>If you have any questions or suggestions, feel free to reach out to us using the form below or through our contact information.</p>
 
         <div class="contact-details">
             <p><strong>Phone:</strong> +91 9392604717</p>
@@ -137,14 +156,16 @@
         </div>
     </section>
 
-<div class="social-media">
-            <h3><center>Follow Us:</h3>
-            <ul>
-                <li><center><a href="https://www.instagram.com/_srikanthchowdary28_/?next=%2F">Instagram</a></li>
-                <li><center><a href="https://www.facebook.com/profile.php?id=61573114504830">Facebook</a></li>
-                 <li><center><a href="https://youtube.com/@srikanthyarraguntla?si=_iZl353EBnTEkMcn">Youtube</a></li>
-            </ul>
-        </div>
+    <!-- Social Media Section -->
+    <div class="social-media">
+        <h3>Follow Us:</h3>
+        <ul>
+            <li><a href="https://www.instagram.com/_srikanthchowdary28_/?next=%2F" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61573114504830" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://youtube.com/@srikanthyarraguntla?si=_iZl353EBnTEkMcn" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+    </div>
+
     <section class="contact-form-section">
         <h2>Send Us a Message</h2>
         <form id="contactForm">
@@ -162,7 +183,9 @@
         </form>
     </section>
 
-    
+    <footer>
+        <p>© 2025 Dining Spot | All rights reserved.</p>
+    </footer>
 
     <script src="/js/contact.js"></script>
 </body>
