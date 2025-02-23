@@ -7,7 +7,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('https://d3l9a8mvoa6cl8.cloudfront.net/wp-content/uploads/sites/3/2020/04/03173944/online-food-delivery-industry-min.jpg'); /* Add your image file path here */
+            background-size: cover;
+            background-position: center;
             margin: 0;
             padding: 0;
         }
@@ -15,7 +17,7 @@
             max-width: 600px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8); /* White background with opacity for contrast */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -69,29 +71,13 @@
             <label for="address">Delivery Address:</label>
             <textarea id="address" name="address" rows="4" required></textarea>
 
-            <!-- Menu Selection -->
-           <h1><a href="View Menu.html">View Menu</a></h1>
-            
-                
-            </select>
-
             <!-- Special Instructions -->
             <label for="instructions">Special Instructions:</label>
             <textarea id="instructions" name="instructions" rows="4"></textarea>
 
-  <!-- Payment Section -->
-            <section class="payment-section">
-                <h2>Payment Details</h2>
-                <label for="payment-method">Payment Method:</label>
-                <select id="payment-method" name="payment-method" required>
-                    <option value="UPI">UPI</option>
-                    <option value="Debit Card">Debit Card</option>
-                    <option value="Credit Card">Credit Card</option>
-                    <option value="Pay on Delivary">Pay on Delivary</option>
-                </select>
-            </section>
-            <!-- Submit Button -->
-            <input type="submit" value="Place Order">
+            <!-- Menu Selection -->
+            <h1><a href="View Menu.html">View Menu</a></h1>
+            
         </form>
     </div>
 </body>

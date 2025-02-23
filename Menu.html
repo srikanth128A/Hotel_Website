@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Menu with Cart</title>
+    <title>Restaurant Menu</title>
     <style>
+        /* CSS Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -42,21 +43,19 @@
             color: #333;
         }
 
-        /* Updated grid layout for side-by-side images */
+        /* Two-column grid layout for video items */
         .menu-grid {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two equal columns */
             gap: 20px;
         }
 
         .menu-item {
             background-color: #fff;
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 280px; /* Adjust the width of each item */
             transition: transform 0.3s ease;
         }
 
@@ -64,120 +63,115 @@
             transform: scale(1.05);
         }
 
-        .menu-item img {
-            max-width: 100%;
+        .menu-item video {
+            width: 100%; /* Make videos responsive */
+            max-width: 300px; /* Limit video size */
             height: auto;
             border-radius: 8px;
         }
 
-        .item-name {
-            font-size: 20px;
-            font-weight: bold;
-            color: #333;
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
         }
 
-        .item-price {
-            font-size: 18px;
-            color: #888;
-            margin-top: 5px;
-        }
-
-        .add-to-cart {
-            margin-top: 10px;
-            padding: 10px 15px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .add-to-cart:hover {
-            background-color: #218838;
-        }
-
-        nav {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        nav a {
+        .nav-links a {
             text-decoration: none;
-            color: #333;
-            margin: 0 10px;
+            color: #28a745;
             font-size: 18px;
             font-weight: bold;
         }
 
-        nav a:hover {
-            color: #28a745;
+        .nav-links a:hover {
+            color: #218838;
+        }
+
+        /* Responsive Design: Stack columns on smaller screens */
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr; /* Stack items in one column */
+            }
         }
     </style>
 </head>
 <body>
 
-     <!-- Header with Restaurant Title -->
+    <!-- Header with Restaurant Title -->
     <div class="header">
         <h1>Our Menu</h1>
     </div>
-<div class="menu-container">
-        <h1>Our Menu</h1>
-        
 
     <div class="menu-container">
+        <h1>Our Menu</h1>
+
         <!-- Starters Section -->
         <div class="menu-section">
-            
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="https://i.pinimg.com/enabled_lo/564x/e1/6c/6a/e16c6abdb9e04596239436e47178c1cc.jpg" alt="Chicken Wings">
+                    <video autoplay muted loop>
+                        <source src="https://videos.pexels.com/video-files/5747588/5747588-uhd_2560_1440_25fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <ul class="nav-links">
-                        <a href="Starters.html">Starters</a>
+                        <li><a href="Starters.html">Starters</a></li>
                     </ul>
                 </div>
                 <div class="menu-item">
-                    <img src="https://i.pinimg.com/enabled_lo/236x/7b/69/ea/7b69ea839992e50e1d570d2c56bf70ab.jpg" alt="Noodles">
+                    <video autoplay muted loop>
+                        <source src="https://video-previews.elements.envatousercontent.com/1ff44a61-0279-4af6-8a89-6f656a9037d0/watermarked_preview/watermarked_preview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <ul class="nav-links">
-                        <a href="Fast Food.html">Fast Food</a>
+                        <li><a href="Fast Food.html">Fast Food</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Biryani Section -->
+        <!-- Biryanis Section -->
         <div class="menu-section">
-            
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="https://i.pinimg.com/474x/09/36/99/093699149a5da725826e1b39abe5bd07.jpg" alt="Karachi Chicken Biryani">
+                    <video autoplay muted loop>
+                        <source src="https://media.istockphoto.com/id/1511074526/video/delicious-chicken-biriyani-on-a-white-plate-indian-style-chicken-biryani-with-egg-and-yogurt.mp4?s=mp4-640x640-is&k=20&c=OiQBZSfnorRCUVBLhVS1z2WeVQ-b3RDaW-97SY3UDKc=" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <ul class="nav-links">
-                        <a href="Biryanis.html">Biryanis</a>
+                        <li><a href="Biryanis.html">Biryanis</a></li>
                     </ul>
                 </div>
                 <div class="menu-item">
-                    <img src="https://i.pinimg.com/236x/19/ff/4b/19ff4b8d5392b1d384f8fbcf0c8e187d.jpg" alt="Caesar Salad">
+                    <video autoplay muted loop>
+                        <source src="https://assets.mixkit.co/active_storage/video_items/100348/1723062327/100348-video-720.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <ul class="nav-links">
-                        <a href="Salad.html">Salad</a>
+                        <li><a href="Salad.html">Salad</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Desserts Section -->
+        <!-- Deserts Section -->
         <div class="menu-section">
-            
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="https://i.pinimg.com/236x/d4/fe/36/d4fe36be0ea2f1fbb0d0a9c41ece7768.jpg" alt="Cheesecake">
+                    <video autoplay muted loop>
+                        <source src="https://v.ftcdn.net/11/43/19/45/700_F_1143194588_cif0gjDA4kgAVCXxI0fOQVEP5EFlFcLg_ST.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <ul class="nav-links">
-                        <a href="Deserts.html">Deserts</a>
+                        <li><a href="Deserts.html">Deserts</a></li>
                     </ul>
                 </div>
                 <div class="menu-item">
-                    <img src="https://i.pinimg.com/736x/a9/3d/77/a93d77d3e242262f2c919bf66aef5b39.jpg" alt="Gulab Jamun">
+                    <video autoplay muted loop>
+                        <source src="https://v.ftcdn.net/11/06/81/26/700_F_1106812631_1zCnbOrGU8uwhuqezbaH7iqPQdx3QLJM_ST.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <ul class="nav-links">
-                        <a href="Sweets.html">Sweets</a>
+                        <li><a href="Sweets.html">Sweets</a></li>
                     </ul>
                 </div>
             </div>
@@ -185,48 +179,43 @@
 
         <!-- Shakes Section -->
         <div class="menu-section">
-           
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="https://i.pinimg.com/236x/78/a4/32/78a432aae6d7af19f7e644867963623a.jpg" alt="Salted Caramel Pretzel">
+                    <video autoplay muted loop>
+                        <source src="https://videos.pexels.com/video-files/3031969/3031969-hd_1920_1080_24fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <ul class="nav-links">
-                        <a href="Shakes.html">Shakes</a>
+                        <li><a href="Shakes.html">Shakes</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <video autoplay muted loop>
+                        <source src="https://videos.pexels.com/video-files/5060123/5060123-uhd_2732_1440_30fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <ul class="nav-links">
+                        <li><a href="Ice Creams.html">Ice Creams</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Ice Creams Section -->
+        <!-- Moktails Section -->
         <div class="menu-section">
-           
             <div class="menu-grid">
                 <div class="menu-item">
-                    <img src="https://www.willflyforfood.net/wp-content/uploads/2022/05/ice-cream-flavors-eggnog.jpg.webp">
+                    <video autoplay muted loop>
+                        <source src="https://media.istockphoto.com/id/484038676/video/bartender-pouring-cocktails-on-counter.mp4?s=mp4-640x640-is&k=20&c=B49krRoYcmpPYaERoOCGhOP-XlRu4hO3jyjJbHuVAqQ=" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <ul class="nav-links">
-                        <a href="Ice Creams.html">Ice Creams</a>
+                        <li><a href="Moktails.html">Moktails</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Moktails Section -->
-       
-           
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img src="https://www.thespruceeats.com/thmb/4FZvvA0KdzUyvT7OWbpLfiND0Us=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/virgin-mojito-recipe-5092273-step-05-02d3a671bc244343af8719cb4739cffe.jpg">
-                    <ul class="nav-links">
-                        <a href="Moktails.html">Moktails</a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
 
 </body>
 </html>
