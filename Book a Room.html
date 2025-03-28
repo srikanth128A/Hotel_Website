@@ -115,6 +115,53 @@
     .submit-btn:hover {
       background-color: #45a049;
     }
+
+    /* Bill Modal Styles */
+    .bill-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bill-content {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .bill-content h2 {
+      margin-bottom: 20px;
+    }
+
+    .bill-content p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .close-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    .close-btn:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
 
@@ -185,6 +232,20 @@
     </form>
   </div>
 
+  <!-- Bill Modal -->
+  <div class="bill-modal" id="billModal">
+    <div class="bill-content">
+      <h2>Booking Confirmed!</h2>
+      <p><strong>Customer Name:</strong> <span id="billCustomerName"></span></p>
+      <p><strong>Mobile Number:</strong> <span id="billCustomerMobile"></span></p>
+      <p><strong>Room Type:</strong> <span id="billRoomType"></span></p>
+      <p><strong>Check-In Date:</strong> <span id="billCheckIn"></span></p>
+      <p><strong>Check-Out Date:</strong> <span id="billCheckOut"></span></p>
+      <p><strong>Total Price:</strong> $<span id="billTotalPrice"></span></p>
+      <button class="close-btn" onclick="closeBillModal()">Close</button>
+    </div>
+  </div>
+
   <script>
     let roomDetails = {
       single: { name: "Single Room", price: 100 },
@@ -212,10 +273,31 @@
       let cvv = document.getElementById('cvv').value;
 
       if (customerName && customerMobile && cardNumber && cardholderName && expiryDate && cvv) {
-        alert(`Booking Confirmed!\nCustomer: ${customerName}\nMobile: ${customerMobile}\nRoom: ${room}\nCheck-In: ${checkIn}\nCheck-Out: ${checkOut}\nPayment Method: Credit/Debit Card`);
+        // Calculate total price
+        let price = parseFloat(document.getElementById('roomPrice').innerText);
+        let checkInDate = new Date(checkIn);
+        let checkOutDate = new Date(checkOut);
+        let timeDiff = checkOutDate - checkInDate;
+        let daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+        let totalPrice = price * daysDiff;
+
+        // Display bill
+        document.getElementById('billCustomerName').innerText = customerName;
+        document.getElementById('billCustomerMobile').innerText = customerMobile;
+        document.getElementById('billRoomType').innerText = room;
+        document.getElementById('billCheckIn').innerText = checkIn;
+        document.getElementById('billCheckOut').innerText = checkOut;
+        document.getElementById('billTotalPrice').innerText = totalPrice.toFixed(2);
+
+        // Show bill modal
+        document.getElementById('billModal').style.display = 'flex';
       } else {
         alert("Please enter all required details.");
       }
+    }
+
+    function closeBillModal() {
+      document.getElementById('billModal').style.display = 'none';
     }
   </script>
 
